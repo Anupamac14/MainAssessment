@@ -8,8 +8,8 @@ class SmallestElementEx{
          set.add(15); 
          System.out.println(set);
          System.out.println(" ");
-         System.out.println("Highest Value: "+set.pollFirst());  
-         System.out.println("Lowest Value: "+set.pollLast());
+         System.out.println("Min: "+set.pollFirst());  
+         System.out.println("MAx: "+set.pollLast());
  	}
 }
          

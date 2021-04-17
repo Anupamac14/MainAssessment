@@ -1,5 +1,6 @@
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 public class RemoveDuplicatesEx
 {
     public static void main(String[] args) 
@@ -9,17 +10,15 @@ public class RemoveDuplicatesEx
         duplicateElements.add(2);
         duplicateElements.add(3);
         duplicateElements.add(4);
+        duplicateElements.add(1);
+        duplicateElements.add(3);
+        duplicateElements.add(1);
         
-        LinkedList<Integer> duplicateElements1 = new LinkedList<Integer>();
-        duplicateElements1.add(1);
-        duplicateElements1.add(3);
-        duplicateElements1.add(1);
-        
-        duplicateElements.addAll(duplicateElements1);
         System.out.println("Elements from LinkedList: "+ duplicateElements);
         
-        LinkedHashSet<Integer> hashSet = new LinkedHashSet<Integer>(duplicateElements);
-        System.out.println("Elements from LinkedHashSet: "+ hashSet);
+        List<Integer> newList = duplicateElements.stream().distinct().collect(Collectors.toList());
+        
+        System.out.println("Element from new LinkedList: "+ newList);
         
         //boolean i = duplicateElements.remove(duplicateElements.contains(duplicateElements));
         //System.out.println("Elements from LinkedHashSet: "+ i);
