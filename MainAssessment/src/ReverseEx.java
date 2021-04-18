@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
  
-// Program to in-place reverse a list in Java
+
 public class ReverseEx
 {
     public static void main(String[] args)
